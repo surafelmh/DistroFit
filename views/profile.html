@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            padding: 2rem;
+            background-color: #2E3440;
+            color: #ECEFF4;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+        .card {
+            background-color: #3B4252;
+            padding: 2.5rem;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border: 1px solid #4C566A;
+            text-align: center;
+        }
+        h2 {
+            margin-top: 0;
+            color: #ECEFF4;
+            font-size: 1.75rem;
+        }
+        .badge {
+            display: inline-block;
+            background-color: #434C5E;
+            color: #88C0D0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            border: 1px solid #4C566A;
+        }
+        .info-box {
+            background-color: #2E3440;
+            border: 1px solid #4C566A;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1.25rem 0;
+            text-align: left;
+        }
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .info-row:last-child {
+            margin-bottom: 0;
+        }
+        .info-label {
+            color: #D8DEE9;
+            font-weight: 500;
+        }
+        .info-value {
+            color: #ECEFF4;
+            font-weight: 700;
+        }
+        p {
+            color: #D8DEE9;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        a.btn-logout {
+            display: block;
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #D08770;
+            color: #2E3440;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            box-sizing: border-box;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+        a.btn-logout:hover {
+            background-color: #BF616A;
+            color: #ECEFF4;
+        }
+        a.btn-logout:active {
+            transform: scale(0.99);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Welcome, {{fname}}!</h2>
+        <span class="badge">Active Session</span>
+        
+        <div class="info-box">
+            <div class="info-row">
+                <span class="info-label">Username:</span>
+                <span class="info-value">{{username}}</span>
+            </div>
+        </div>
+        <p>Logged in into DistroFit</p>
+        <a class="btn-logout" href="/logout">Logout</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            padding: 2rem;
+            background-color: #2E3440;
+            color: #ECEFF4;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+        .card {
+            background-color: #3B4252;
+            padding: 2.5rem;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            border: 1px solid #4C566A;
+        }
+        h2 {
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            color: #ECEFF4;
+            font-size: 1.75rem;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.4rem;
+            color: #D8DEE9;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #2E3440;
+            border: 1px solid #4C566A;
+            border-radius: 6px;
+            color: #ECEFF4;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #88C0D0;
+            box-shadow: 0 0 0 3px rgba(136, 192, 208, 0.25);
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #88C0D0;
+            color: #2E3440;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: 700;
+            margin-top: 0.5rem;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+        .btn-submit:hover {
+            background-color: #81A1C1;
+        }
+        .btn-submit:active {
+            transform: scale(0.99);
+        }
+        .divider {
+            margin: 1.75rem 0 1.25rem 0;
+            border-top: 1px solid #4C566A;
+        }
+        .alt-action {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #D8DEE9;
+        }
+        .alt-action a {
+            color: #88C0D0;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .alt-action a:hover {
+            text-decoration: underline;
+            color: #81A1C1;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Create an Account</h2>
+        <form action="/signup" method="POST">
+            <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" name="fname" id="fname" required>
+            </div>
+            <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" name="lname" id="lname" required>
+            </div>
+            <div class="form-group">
+                <label for="userName">Username</label>
+                <input type="text" name="userName" id="userName" autocomplete="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" autocomplete="new-password" required>
+            </div>
+            <button type="submit" class="btn-submit">Register</button>
+        </form>
+
+        <div class="divider"></div>
+
+        <div class="alt-action">
+            <a href="/login.html">Login here</a>
+        </div>
+    </div>
+</body>
+</html>
